@@ -1,0 +1,6 @@
+<% if clothing.errors.any? %>
+  <%= clothing.errors.count %>件のエラーが発生しました
+  <% clothing.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>

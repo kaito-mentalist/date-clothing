@@ -1,0 +1,13 @@
+
+<%= flash[:notice] %>
+<h1>服装一覧</h1>
+
+<% @clothings.each do |clothing| %>
+<p>画像：<%= attachment_image_tag clothing, :image, format:'png', size:'820×685' %></p>
+<p>女性の反応：<%= clothing.reaction %></p>
+<%= link_to "詳細", clothing_path(clothing.id) %>
+<%= link_to "編集", edit_clothing_path(clothing.id) %>
+<%= link_to "削除", clothing_path(clothing), method: :delete %>
+
+
+<%end%>

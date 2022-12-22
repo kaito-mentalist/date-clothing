@@ -1,0 +1,12 @@
+<%= render 'clothings/error', clothing: @clothing %>
+
+
+<h1>服装を投稿する</h1>
+<%= form_with model:@clothing, local:true do |f| %>
+
+<h4>画像</h4>
+<%= f.attachment_field :image %>
+<h4>女性の反応</h4>
+<%= f.text_area :reaction %>
+<%= f.submit '投稿する' %>
+<%end%>

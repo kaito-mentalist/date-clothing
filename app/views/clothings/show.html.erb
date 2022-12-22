@@ -1,0 +1,10 @@
+
+
+<%= flash[:notice] %>
+<div>
+  <%= attachment_image_tag @clothing, :image %>
+  <p>女性の反応：<%= @clothing.reaction %></p>
+  <%= link_to "編集する",edit_clothing_path %>
+  <%= link_to "戻る", clothings_path %>
+
+</div>
